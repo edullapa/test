@@ -9,10 +9,11 @@ Finalmente, iria se executar o SQL UPDATE direto no SGBD inserindo os lotes dos 
 das categorias.
 
 #PERGUNTA 2
-Pensando no desempenho, o que deve ser considerado em sistemas que realizam consulta de dados é o volume de 
-dados, e as interfaces de usuário utilizadas. Nesse sentido deve de ser previsto a configuração a quantidade de 
-dados a ser recuperado e a partir de que posição. JPA apresenta já opções para restringir o número de páginas a
-ser recuperadas. 
+Pensando no desempenho, os pontos críticos para realizar consultas de dados são o volume de 
+dados disponível, e as interfaces de usuário utilizadas. Nesse sentido, a página do projeto deve permitir a
+configuração da quantidade de dados a ser recuperado e a posição (offset) da recuperação dependendo do cliente 
+que a acesse. A especificação JPA permite a otimização de acesso ao banco de dados mediante implementações que 
+permitam restringir o número de páginas a ser recuperadas e o offset. 
 
 
 # Terceira parte (Usar Bootstrap)
@@ -21,11 +22,8 @@ ser recuperadas.
 - Dessa forma precisamos ter uma página leve e "responsive". Para isso: 
     - Implemente uma biblioteca front-end para que essa questão seja resolvida; 
     - Implementada a biblioteca comente a pegunta abaixo: 
-    - PERGUNTA 2: 
-        - Existem inúmeras técnicas e mecanismos de otimização de resultados da página, tanto em front-end quanto em back-end. 
-        - Comente o que poderia ser melhorado na página do projeto para que a consulta de 10.000 produtos não atrapalhe o funcionamento da mesma. 
 
-# Quarta parte (Pensar)
+# Quarta parte (A desenvolver)
 
 - No projeto temos uma imagem principal que necessita de uma implementação de front-end que trabalhe com objetos sobrepostos na mesma. 
 - A ideia é ter botões na tela que ao clicar seja possível criar objetos como círculos, triângulos e quadrados e inseridos na imagem principal. 
@@ -39,8 +37,3 @@ ser recuperadas.
     - Pesquise e implemente uma biblioteca front-end que resolva essa necessidade. 
 
 # Quinta parte (Upload)
-
-- Ao finalizar o teste. 
-- Crie um arquivo no diretório raiz do projeto com o nome RESPOSTAS.txt, para responder as perguntas acima mencionadas; (PERGUNTA 1 e PERGUNTA 2); 
-- Crie um projeto em seu próprio repositorio(gitHub, gitLab, etc), e suba todo o conteúdo do teste; 
-- Envie a URL do projeto git para que possamos analisar. 

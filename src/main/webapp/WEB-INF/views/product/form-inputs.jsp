@@ -24,3 +24,14 @@
 
           </div>
         </div>
+        <div class="form-group">
+          <label for="category">category</label>
+          <div class="input-group">
+            <span class="input-group-addon"><i class="glyphicon glyphicon-unchecked"></i></span>
+            <form:select path='name'>
+            	<form:option value="0" label="-- Select one category --"/>
+    			<form:options items="${categories}" itemValue="name" itemLabel="name"/>
+            </form:select>
+          </div>
+        </div>
+        

@@ -20,7 +20,7 @@ import br.com.energias.treinamento.models.Category;
 @Controller
 @RequestMapping("/category")
 @Transactional
-public class CategoryController 
+public class CategoryController
 {
 	   @Autowired
 	   private CategoryDao categoryDao;

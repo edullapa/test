@@ -1,26 +1,29 @@
 <%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
-<%@taglib tagdir="/WEB-INF/tags/template" prefix="template" %>
+<%@taglib tagdir="/WEB-INF/tags/template" prefix="template"%>
 <template:admin>
-<jsp:attribute name="extraStyles">
-<link rel="stylesheet" href="<c:url value='/assets/css/pagination/jqpagination.css'/>" />
+	<jsp:attribute name="extraStyles">
+<link rel="stylesheet"
+			href="<c:url value='/assets/css/pagination/jqpagination.css'/>" />
 </jsp:attribute>
-<jsp:attribute name="extraScripts">
+	<jsp:attribute name="extraScripts">
 <script src="<c:url value='/assets/js/jquery.jqpagination.js'/>"></script>
 </jsp:attribute>
-<jsp:body>
+	<jsp:body>
   <div>
-    <div class ="container min-container">
+    <div class="container min-container">
 
       <h2 class="basic-title">List product</h2>
 
         <div class="well">
-          <table class="table table-condensed table-bordered table-striped table-hover">
+          <table
+						class="table table-condensed table-bordered table-striped table-hover">
           		  <thead>
 	                  <tr>
-	                  	<td>id</td>
+	                  		<td>id</td>
 		                  	<td>name</td>
+		                  	<td>category</td>
 		                  	<td>description</td>
-		                  	<td>price</td>
+		                  	<td>price</td>		                  	
 						<td>actions</td>
 	                  </tr>
                   </thead>
@@ -29,15 +32,20 @@
 	                  <tr>
 						<td><a href="<c:url value='/product'/>/${object.id}">${object.id}</a></td>
 		                  	<td>${object.name}</td>
+		                  	<td>${object.category.name}</td>
 		                  	<td>${object.description}</td>
-		                  	<td>${object.price}</td>
-	                    <td><a href="<c:url value='/product/remove'/>/${object.id}">Remove</a></td>
+		                  	<td>${object.price}</td>		                  	
+	                    <td><a
+										href="<c:url value='/product/remove'/>/${object.id}">Remove</a></td>
 					  </tr>
                   </c:forEach>
                   </tbody>
           </table>
-		  <template:paginationComponent paginatedList="${paginatedList}" page="${param.page}" action="/product"/>
-          <a href="<c:url value='/product/form'/>" class="btn btn-success"><span class="glyphicon glyphicon-plus-sign"></span> Add New</a>
+		  <template:paginationComponent paginatedList="${paginatedList}"
+						page="${param.page}" action="/product" />
+          <a href="<c:url value='/product/form'/>"
+						class="btn btn-success"><span
+						class="glyphicon glyphicon-plus-sign"></span> Add New</a>
         </div>
     </div>
   </div>

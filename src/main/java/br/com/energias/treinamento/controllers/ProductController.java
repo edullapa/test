@@ -13,6 +13,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
 
+import br.com.energias.treinamento.daos.CategoryDao;
 import br.com.energias.treinamento.daos.ProductDao;
 import br.com.energias.treinamento.models.Product;
 
@@ -24,11 +25,14 @@ public class ProductController
 
    @Autowired
    private ProductDao productDao;
+   @Autowired
+   private CategoryDao categoryDao;
 
    @GetMapping("/form")
    public ModelAndView form(Product product)
    {
       ModelAndView modelAndView = new ModelAndView("product/form-add");
+      modelAndView.addObject("categories", categoryDao.all());
       return modelAndView;
 
    }
