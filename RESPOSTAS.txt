@@ -1,10 +1,18 @@
 ## RESPOSTAS
 
-# PREGUNTA 1 
-Considerando o dito, que existem 10000 registros na tabela produto, inicialmente será necessário realizar um pré-processamento para assegurar a integridade dos dados e dividir os produtos por lotes. Isto é, identificar as grupos de registros que pertencem a uma determinada categoria. Caso existam elementos sem categoria, seria necessário criar uma temporárias. Finalmente, iria se executar o SQL UPDATE direto no SGBD inserindo os lotes dos registro vinculados aos ID das categorias.
+# PERGUNTA 1 
+Considerando o dito, que existem 10000 registros na tabela produto, inicialmente será necessário realizar 
+um pré-processamento para assegurar a integridade dos dados e dividir os produtos por lotes. Isto é, 
+identificar as grupos de registros que pertencem a uma determinada categoria. Caso existam elementos 
+sem categoria, seria necessário criar uma temporárias. 
+Finalmente, iria se executar o SQL UPDATE direto no SGBD inserindo os lotes dos registro vinculados aos IDs 
+das categorias.
 
-#PREGUNTA 2 (Finalizar)
-Pensando no desempenho, o que deve ser considerado em sistemas que realizam consulta de dados é o volume de dados, e o pool de conexões disponíveis. É nesse sentido que deve de ser configurada a paginação dos dados. 
+#PERGUNTA 2
+Pensando no desempenho, o que deve ser considerado em sistemas que realizam consulta de dados é o volume de 
+dados, e as interfaces de usuário utilizadas. Nesse sentido deve de ser previsto a configuração a quantidade de 
+dados a ser recuperado e a partir de que posição. JPA apresenta já opções para restringir o número de páginas a
+ser recuperadas. 
 
 
 # Terceira parte (Usar Bootstrap)
