@@ -20,7 +20,7 @@
        name VARCHAR(20),
        description VARCHAR(50),
        price DECIMAL(10,2),
-       id_category INT(5),
+       category INT(5),
        FOREIGN KEY(category) REFERENCES category(id))ENGINE=MyISAM;
 ```
 
