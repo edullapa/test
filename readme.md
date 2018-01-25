@@ -1,20 +1,22 @@
-# Teste 
+# Spring Boot application 
 
-- Na realização do teste, foi criado um banco com duas tabelas. A tabela product e category. A seguir são as instruções:
+It's a sampling of how Spring Boot helps you accelerate and facilitate application development.
+The additional softwares are used ender development:
+-**MySQL**: Open-source relational database management system used to development project. You need to create a MySQL database named **mall** and you have registered a connection for in the Eclipse IDE. The table data is contained as follow: 
 
 ```bash
   $ mysql -u root -p
   mysql> CREATE DATABASE mall;
-  mysql> show databases;
-  // Criando as tabelas
+  mysql> SHOW DATABASES;
+  // Table data
   mysql> USE mall;
-  mysql> drop table category;
+  mysql> DROP TABLE category;
   mysql> CREATE TABLE IF NOT EXISTS category(
        id INT(5) AUTO_INCREMENT PRIMARY KEY,
        name VARCHAR(20),
        description VARCHAR(50))ENGINE=MyISAM;
 
-  mysql> drop table product;
+  mysql> DROP TABLE product;
   mysql> CREATE TABLE IF NOT EXISTS product(
        id INT(5) AUTO_INCREMENT PRIMARY KEY,
        name VARCHAR(20),
@@ -24,4 +26,5 @@
        FOREIGN KEY(category) REFERENCES category(id))ENGINE=MyISAM;
 ```
 
-- Fim do teste.
+-**Eclipse IDE**.
+-**Maven**.
