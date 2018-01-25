@@ -2,6 +2,7 @@
 
 It's a sampling of how Spring Boot helps you accelerate and facilitate application development.
 The additional softwares are used ender development:
+
 -**MySQL**: Open-source relational database management system used to development project. You need to create a MySQL database named **mall** and you have registered a connection for in the Eclipse IDE. The table data is contained as follow: 
 
 ```bash
@@ -27,4 +28,5 @@ The additional softwares are used ender development:
 ```
 
 -**Eclipse IDE**.
+
 -**Maven**.
